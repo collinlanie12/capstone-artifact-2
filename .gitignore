@@ -1,0 +1,43 @@
+# Gradle files
+.gradle/
+build/
+**/build/
+
+# OS metadata files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+
+# Local configuration file (SDK path, etc)
+local.properties
+
+# Cache & IDE files
+.cache/
+.idea/
+*.iml
+
+# Kotlin/Java compiled classes
+*.class
+*.jar
+*.war
+*.ear
+
+# Android Studio auto-generated folders
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Temporary files
+*.swp
+*.tmp
+
+# JetBrains Rider
+.idea/
+*.sln
+*.user
+*.suo
+*.userosscache
+*.sln.docstates

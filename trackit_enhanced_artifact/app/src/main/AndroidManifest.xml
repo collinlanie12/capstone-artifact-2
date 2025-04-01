@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.trackit_enhanced_artifact">
+
+    <!-- Permissions for sending SMS functionality -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- Declare that the app uses telephony features -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="TrackIt"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.comp360_final_project">
+
+    <!-- Declare the LoginActivity as the launcher activity -->
+    <activity android:name="com.example.trackit_enhanced_artifact.LoginActivity" android:exported="true">
+        <intent-filter>
+            <!-- Action MAIN to indicate the starting point of the app -->
+            <action android:name="android.intent.action.MAIN" />
+            <!-- Category LAUNCHER to make this activity visible in the app launcher -->
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <!-- Declare the EventListActivity -->
+    <activity android:name="com.example.trackit_enhanced_artifact.EventListActivity" android:exported="true" />
+
+    <!-- Declare the SMSNotificationReceiver for handling SMS notifications -->
+    <receiver android:name="com.example.trackit_enhanced_artifact.SMSNotificationReceiver"
+        android:exported="true"
+        android:permission="android.permission.SEND_SMS"/>
+
+    </application>
+
+</manifest>
