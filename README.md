@@ -38,4 +38,4 @@
 ![Original Artifact](screenshots/original_event_list.png)
 
 ### After Enhancement
-![Enhanced Artifact](screenshots/enhanced_event_list)
+![Enhanced Artifact](screenshots/enhanced_event_list.png)
