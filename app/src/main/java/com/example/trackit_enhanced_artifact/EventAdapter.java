@@ -1,5 +1,15 @@
-package com.example.comp360_final_project;
+package com.example.trackit_enhanced_artifact;
 
+/* EventAdapter.java
+ *
+ * Adapter for displaying a list of events in a RecyclerView.
+ * Applies MVC pattern to bind event data to UI components.
+ *
+ * Author: Collin Lanier
+ * Date: 2025-03-26
+ */
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,16 +20,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Adapter for displaying a list of events in a RecyclerView.
- */
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
 
     // Context and event list data source
     private final Context context;
-    private final ArrayList<Event> eventList;
+    private final List<Event> eventList; // List for RecyclerView
 
     // Click listeners for delete and edit actions
     private final OnDeleteClickListener deleteClickListener;
@@ -33,7 +40,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
      * @param deleteClickListener listener for delete button clicks
      * @param editClickListener   listener for edit button clicks
      */
-    public EventAdapter(Context context, ArrayList<Event> eventList,
+    public EventAdapter(Context context, List<Event> eventList,
                         OnDeleteClickListener deleteClickListener,
                         OnEditClickListener editClickListener) {
         this.context = context;
@@ -69,27 +76,33 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         // Set event details
         holder.eventName.setText(event.getName());
         holder.eventDescription.setText(event.getDescription());
-
-        // Format and set date and time
-        String eventDate = event.getYear() + "-" + String.format("%02d", event.getMonth()) + "-" + String.format("%02d", event.getDay());
-        String eventTime = String.format("%02d:%02d", event.getHour(), event.getMinute());
-
-        holder.eventDate.setText(eventDate);
-        holder.eventTime.setText(eventTime);
+        holder.eventDate.setText(formatDate(event));
+        holder.eventTime.setText(formatTime(event));
 
         // Set click listeners for delete and edit actions
         holder.deleteButton.setOnClickListener(v -> deleteClickListener.onDeleteClick(position));
         holder.editButton.setOnClickListener(v -> editClickListener.onEditClick(position, event));
     }
 
-    /**
-     * Returns the number of events in the list.
-     *
-     * @return the size of the event list
-     */
     @Override
     public int getItemCount() {
         return eventList.size();
+    }
+
+    /**
+     * Formats the date string for display.
+     */
+    @SuppressLint("DefaultLocale")
+    private String formatDate(Event event) {
+        return String.format("%04d-%02d-%02d", event.getYear(), event.getMonth(), event.getDay());
+    }
+
+    /**
+     * Formats the time string for display.
+     */
+    @SuppressLint("DefaultLocale")
+    private String formatTime(Event event) {
+        return String.format("%02d:%02d", event.getHour(), event.getMinute());
     }
 
     /**
@@ -115,16 +128,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         }
     }
 
-    /**
-     * Interface for handling delete button click events.
-     */
     public interface OnDeleteClickListener {
         void onDeleteClick(int position);
     }
 
-    /**
-     * Interface for handling edit button click events.
-     */
     public interface OnEditClickListener {
         void onEditClick(int position, Event event);
     }

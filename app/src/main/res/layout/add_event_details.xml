@@ -40,25 +40,27 @@
         tools:ignore="TextFields" />
 
     <!-- Event Time Input -->
+
+    <!-- Event Description Input -->
+
     <EditText
         android:id="@+id/editTextEventTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="@string/event_time"
+        android:inputType="none"
         android:minHeight="48dp"
         android:padding="12dp"
-        android:hint="@string/event_time"
-        android:focusable="false"
-        android:clickable="true"
-        android:inputType="none"
         android:textColor="@android:color/black"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextEventDate" />
 
-    <!-- Event Description Input -->
     <EditText
         android:id="@+id/editTextEventDescription"
         android:layout_width="wrap_content"

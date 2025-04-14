@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.comp360_final_project'
+    namespace 'com.example.trackit_enhanced_artifact'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.comp360_final_project"
+        applicationId "com.example.trackit_enhanced_artifact"
         minSdk 26
         targetSdk 34
         versionCode 1
