@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Comp360_final_project"
+rootProject.name = "trackit_enhanced_artifact"
 include ':app'

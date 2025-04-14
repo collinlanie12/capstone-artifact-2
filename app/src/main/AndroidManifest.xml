@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.comp360_final_project">
+    package="com.example.trackit_enhanced_artifact">
 
     <!-- Permissions for sending SMS functionality -->
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -15,7 +15,7 @@
         android:theme="@style/Theme.comp360_final_project">
 
     <!-- Declare the LoginActivity as the launcher activity -->
-    <activity android:name=".LoginActivity" android:exported="true">
+    <activity android:name="com.example.trackit_enhanced_artifact.LoginActivity" android:exported="true">
         <intent-filter>
             <!-- Action MAIN to indicate the starting point of the app -->
             <action android:name="android.intent.action.MAIN" />
@@ -25,10 +25,10 @@
     </activity>
 
     <!-- Declare the EventListActivity -->
-    <activity android:name=".EventListActivity" android:exported="true" />
+    <activity android:name="com.example.trackit_enhanced_artifact.EventListActivity" android:exported="true" />
 
     <!-- Declare the SMSNotificationReceiver for handling SMS notifications -->
-    <receiver android:name=".SMSNotificationReceiver"
+    <receiver android:name="com.example.trackit_enhanced_artifact.SMSNotificationReceiver"
         android:exported="true"
         android:permission="android.permission.SEND_SMS"/>
 

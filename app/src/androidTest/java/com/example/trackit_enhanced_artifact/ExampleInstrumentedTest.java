@@ -1,4 +1,4 @@
-package com.example.comp360_final_project;
+package com.example.trackit_enhanced_artifact;
 
 import android.content.Context;
 
