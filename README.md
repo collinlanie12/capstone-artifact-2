@@ -4,6 +4,8 @@
 
 **TrackIt** which is an event tracking mobile application to help users manage and track upcoming events such as meetings, concerts, and appointments. It includes features like adding, editing, and deleting events, with SMS notifications and clean UI. This artifact is from the course CS-360 Mobile Architecture and Programming. For this project I created a mobile app named TrackIt using Android studio. The requirements for the mobile application was a sign-up and login function, a database to store user credentials and event information, and SMS notifications. Once a user added a new list/event item, they would receive an SMS message about their planned event. The planned enhancement was for the **Algorithms and Data Structures** category. You will see that the original artifact is named **Comp360_final_project** and the enhanced version is named **trackit_enhanced_artifact**.
 
+You can find the difference between the original and enhanced artifacts through my pull request: [Pull Request: Enhanced TrackIt Android Mobile Application (Capstone Artifact 2)](https://github.com/collinlanie12/capstone-artifact-2/pull/1)
+
 ---
 
 ## Code Enhancements
