@@ -35,7 +35,7 @@
 ## Screenshots
 
 ### Before Enhancement 
-![Original Artifact](screenshots/original_event_list.png)
+![Original Artifact](screenshots/original_android_artifact.png)
 
 ### After Enhancement
-![Enhanced Artifact](screenshots/enhanced_event_list.png)
+![Enhanced Artifact](screenshots/enhanced_android_artifact.png)

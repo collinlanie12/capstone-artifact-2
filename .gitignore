@@ -35,9 +35,19 @@ captures/
 *.tmp
 
 # JetBrains Rider
-.idea/
 *.sln
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+
+# Android specific
+*.apk
+*.ap_  # Prebuilt APK file
+
+# IntelliJ IDEA additional files
+out/
+
+# Virtual environments
+venv/
+.venv/
